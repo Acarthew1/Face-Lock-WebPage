@@ -1,0 +1,63 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title"> Users That Have Access To Your Door</h4>
+      </div>
+      <div class="card-body">
+        <div class="table">
+          <table class="table">
+            <thead class=" text-primary">
+              <th>
+                Username
+              </th>
+              <th>
+                Remove
+              </th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of TrustedUsers">
+                <td>{{user}}</td>
+                <td ><button class="btn" (click)="removeTrustedUser(user)" >Remove</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"> Add a new user to acess your door</h4>
+        </div>
+        <div class="card-body">
+          <div class="table">
+            <table class="table">
+              <thead class=" text-primary">
+                <th>
+                  Username
+                </th>
+                <th>
+                  Add
+                </th>
+              </thead>
+              <tbody>
+               
+                <tr>
+                  <td>
+                    <input type="text" [(ngModel)]="TrustedUser" name="TrustedUser">
+                  </td>
+                  <td>
+                    <button class="btn" (click)="addTrustedUser()" >Add</button>
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+ 

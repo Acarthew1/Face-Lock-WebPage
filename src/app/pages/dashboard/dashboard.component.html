@@ -1,0 +1,129 @@
+<div class="row">
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="card card-stats">
+      <div class="card-body ">
+        <div class="row">
+          <div class="col-5 col-md-4">
+            <div class="icon-big text-center icon-warning">
+              <i class="nc-icon nc-key-25 text-warning"></i>
+            </div>
+          </div>
+          <div class="col-7 col-md-8">
+            <div class="numbers">
+              <p class="card-category">Unlocks Today</p>
+              <p class="card-title">{{unlocks}}
+                <p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer ">
+        <hr>
+        <div class="stats">
+          <i class="fa fa-refresh" (click)="refresh()" style="cursor: pointer;"></i> Update Now
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="card card-stats">
+      <div class="card-body ">
+        <div class="row">
+          <div class="col-5 col-md-4">
+            <div class="icon-big text-center icon-warning">
+              <i class="nc-icon nc-money-coins text-success"></i>
+            </div>
+          </div>
+          <div class="col-7 col-md-8">
+            <div class="numbers">
+              <p class="card-category">Unrecognised Today</p>
+              <p class="card-title">{{totalUnrec}}
+                <p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer ">
+        <hr>
+        <div class="stats">
+          <i class="fa fa-refresh" (click)="refresh()" style="cursor: pointer;"></i> Update Now
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="card card-stats">
+      <div class="card-body ">
+        <div class="row">
+          <div class="col-5 col-md-4">
+            <div class="icon-big text-center icon-warning">
+              <i class="nc-icon nc-calendar-60 text-danger"></i>
+            </div>
+          </div>
+          <div class="col-7 col-md-8">
+            <div class="numbers">
+              <p class="card-category">Last unlock Time</p>
+              <p class="card-title">{{lastTime}}
+                <p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer ">
+        <hr>
+        <div class="stats">
+          <i class="fa fa-refresh" (click)="refresh()" style="cursor: pointer;"></i> Update Now
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="card card-stats">
+      <div class="card-body ">
+        <div class="row">
+          <div class="col-5 col-md-4">
+            <div class="icon-big text-center icon-warning">
+              <i class="nc-icon nc-single-02 text-primary"></i>
+            </div>
+          </div>
+          <div class="col-7 col-md-8">
+            <div class="numbers">
+              <p class="card-category">Trusted Users</p>
+              <p class="card-title">{{numTrusted}}
+                <p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer ">
+        <hr>
+        <div class="stats">
+          <i class="fa fa-refresh" (click)="refresh()" style="cursor: pointer;"></i> Update Now
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="card ">
+      <div class="card-header ">
+        <h5 class="card-title">Users Behavior</h5>
+      </div>
+      <div class="card-body ">
+        <canvas id=chartEmail width="600" height="200"></canvas>
+        <canvas id=chartHours width="400" height="100"></canvas>
+    
+      </div>
+      <div class="card-footer ">
+        <hr>
+        <div class="stats">
+          <i class="fa fa-history"></i> Updated 3 minutes ago
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>    </div>
+
+
