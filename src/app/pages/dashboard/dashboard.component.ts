@@ -5,6 +5,7 @@ import { NumberValueAccessor } from '@angular/forms';
 import { count } from 'rxjs/operators';
 
 
+
 @Component({
     selector: 'dashboard-cmp',
     moduleId: module.id,
@@ -35,6 +36,7 @@ export class DashboardComponent implements OnInit{
   public chartHours;
 
     ngOnInit(){
+      
       this.authService.getProfile().subscribe((profile: any) => {
         this.user = profile.user;
         this.name = this.user["name"]
@@ -46,6 +48,8 @@ export class DashboardComponent implements OnInit{
         this.lastTime = this.user["lastTime"];
         this.totalUnrec = this.user["totalUnrec"];
         this.logs = this.user["logs"];
+        this.Namelabels = Array();
+        this.Valuelabels = Array();
 
         //console.log(this.logs['count']);
         this.times = this.unlocks;
@@ -53,21 +57,12 @@ export class DashboardComponent implements OnInit{
         if(this.userFound == false){
           this.Namelabels.push(this.username.toString());
           this.Valuelabels.push(this.unlocks);
+          this.userFound = true;
         }
           
 
         
 
-        function addToGraph(logs){
-          var logSTR = JSON.stringify(logs);
-          var logobj = JSON.parse(logSTR);
-
-          
-
-          
-          //console.log(logobj[0].count);
-
-        }
         var logSTR = JSON.stringify(this.logs);
         var logobj = JSON.parse(logSTR);
         logobj.forEach(element => {
@@ -172,6 +167,7 @@ export class DashboardComponent implements OnInit{
     }
 
     refresh(){
+      this.userFound = false;
       this.ngOnInit();
     }
 }

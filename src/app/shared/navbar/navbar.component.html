@@ -33,6 +33,7 @@
             <a *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}" ngbDropdownItem [routerLink]="['/user']">Profile</a>
             <a *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}" ngbDropdownItem (click)="onLogoutClick()" href="#">Logout</a>
             <a *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}" ngbDropdownItem [routerLink]="['/login']">Login</a>
+            <a *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}" ngbDropdownItem [routerLink]="['/home']">Home</a>
           </div>
         </li>
       
