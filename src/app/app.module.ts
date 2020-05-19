@@ -20,7 +20,7 @@ import {ValidateService} from "./services/validate.service";
 import {FlashMessagesModule} from 'angular2-flash-messages';
 import {AuthService} from './services/auth.service';
 import {HttpClientModule} from '@angular/common/http';
-import {JwtModule} from '@auth0/angular-jwt';
+import {JwtModule, JwtHelperService} from '@auth0/angular-jwt';
 import { AuthGuard } from './guards/auth.guard';
 import {ReactiveFormsModule} from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -56,6 +56,7 @@ import { TwitterComponent } from './pages/twitter/twitter.component';
         whitelistedDomains: ["http://localhost:4200"]
       }
     }),
+    JwtHelperService,
     RouterModule.forRoot(AppRoutes,{
       useHash: true
     }),
@@ -65,6 +66,7 @@ import { TwitterComponent } from './pages/twitter/twitter.component';
     FooterModule,
     FixedPluginModule
   ],
+  exports:[JwtModule, JwtHelperService],
   providers: [ValidateService, AuthService, AuthGuard],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

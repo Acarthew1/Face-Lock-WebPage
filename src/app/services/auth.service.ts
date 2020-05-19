@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import {HttpHeaders} from '@angular/common/http';
 import {map} from 'rxjs/operators';
 //import 'rxjs/add/operator/map';
-import {HttpResponse} from '@angular/common/http';
+//import {HttpResponse} from '@angular/common/http';
 //import {tokenNotExpired} from 'angular2-jwt';
 import {JwtHelperService} from '@auth0/angular-jwt';
 
